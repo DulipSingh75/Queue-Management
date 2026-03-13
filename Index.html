@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blok Design - Login</title>
+    
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="Fav.jpg">
+    <link rel="icon" type="image/jpeg" sizes="96x96" href="Fav.jpg">
+    <link rel="apple-touch-icon" sizes="480x480" href="Fav.jpg">
+
+    <style>
+        /* General Reset & Typography */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Login Card Styling */
+        .login-card {
+            width: 100%;
+            max-width: 450px;
+            background-color: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+        }
+
+        /* Logo Styling */
+        .logo-container {
+            margin-bottom: 80;
+        }
+
+        /* Typography */
+        h1 {
+            color: #232e4d;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #6b7280;
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 35px;
+        }
+
+        /* Form & Input Styling */
+        form {
+            text-align: left;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            position: relative; 
+        }
+
+        label {
+            display: block;
+            color: #232e4d;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            padding-right: 45px; 
+            font-size: 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            color: #333;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        input::placeholder {
+            color: #9ca3af;
+        }
+
+        input:focus {
+            border-color: #232e4d;
+        }
+
+        /* Eye Icon Styling */
+        .toggle-password {
+            position: absolute;
+            right: 15px;
+            top: 36px; 
+            cursor: pointer;
+            color: #9ca3af;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .toggle-password:hover {
+            color: #232e4d;
+        }
+
+        /* Button Styling */
+        button {
+            width: 100%;
+            background-color: #232e4d;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #1a233a;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        
+        <div class="logo-container">
+            <img src="Fav.jpg" alt="Company Logo" style="height: 55px; width: auto;">
+        </div>
+
+        <h1>Blok Design</h1>
+        <h2>Image Time Tracking System</h2>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+                <span class="toggle-password" id="togglePassword" title="Show Password">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                        <circle cx="12" cy="12" r="3"></circle>
+                    </svg>
+                </span>
+            </div>
+
+            <button type="submit">Sign In</button>
+        </form>
+    </div>
+
+    <script>
+        // 1. Logic for toggling the password visibility
+        const togglePassword = document.getElementById('togglePassword');
+        const passwordInput = document.getElementById('password');
+
+        togglePassword.addEventListener('click', function () {
+            // Check the current type of the input
+            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            
+            // Change the SVG icon depending on whether the password is shown or hidden
+            if (type === 'text') {
+                // Eye with a slash (Hide password)
+                this.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>`;
+                this.setAttribute('title', 'Hide Password');
+            } else {
+                // Regular eye (Show password)
+                this.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>`;
+                this.setAttribute('title', 'Show Password');
+            }
+        });
+
+        // 2. Logic for authentication
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const enteredUsername = document.getElementById('username').value;
+            const enteredPassword = document.getElementById('password').value;
+
+            // Updated credentials check
+            if (enteredUsername === 'Admin' && enteredPassword === '12345') {
+                window.location.href = 'All.html';
+            } else {
+                alert('username/password error');
+            }
+        });
+    </script>
+
+</body>
+</html>

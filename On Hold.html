@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blok Queue Management</title>
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="Fav.jpg">
+    <link rel="icon" type="image/jpeg" sizes="96x96" href="Fav.jpg">
+    <link rel="apple-touch-icon" sizes="480x480" href="Fav.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <img src="Blok.png" alt="Company Logo" class="logo">
+
+         <img src="sothebys" alt="Second Logo" class="logo">
+    </header>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                Order Selection <span class="close">✕</span>
+            </div>
+            <div class="sidebar-nav">
+                <div class="sidebar-nav-item">◯ > ON HOLD</div>
+            </div>
+
+            <div>
+                <div class="sidebar-section-title">Property Filter</div>
+                <div class="checkbox-group">
+                    <label class="checkbox-item"><input type="checkbox"> Jobs Over Deadline</label>
+                    <label class="checkbox-item"><input type="checkbox"> Rejected By Clients</label>
+                    <label class="checkbox-item"><input type="checkbox"> Auto QC</label>
+                    <label class="checkbox-item"><input type="checkbox"> Fast Lane</label>
+                </div>
+            </div>
+
+            <div class="dropdown-group">
+                <div class="dropdown">
+                    <label>Thumbnail Download</label>
+                    <select><option>Select Thumbnail D...</option></select>
+                </div>
+                <div class="dropdown">
+                    <label>File Download</label>
+                    <select><option>Select File Downl...</option></select>
+                </div>
+                <div class="dropdown">
+                    <label>File Upload</label>
+                    <select><option>Select File Upload...</option></select>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-nav">
+                <div class="nav-icon-group">
+                    <div class="nav-icon">◧</div>
+                    
+                    <div class="dropdown-menu-container">
+                        <div class="nav-icon" style="background-color: transparent; color: #333; padding: 10px;">⚙️ ▽</div>
+                        
+                        <div class="nav-dropdown">
+                            <a href="#" class="nav-dropdown-item"><span class="icon">👤</span> Employee List</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">👥</span> Roles</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">🤝</span> Teams</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">🕒</span> Shifts</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📅</span> Shift Plans</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📁</span> Shift Groups</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">🎨</span> Designer Shifts</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📋</span> Specifications</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">⚙️</span> Complexities</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📄</span> File Status</a>
+                            
+                            <div class="nav-dropdown-item has-submenu">
+                                <span class="icon">📊</span> Reporting <span class="arrow-right">›</span>
+                                <div class="nav-sub-dropdown">
+                                    <a href="#" class="nav-dropdown-item"><span class="icon">📈</span> Daily Report</a>
+                                    <a href="#" class="nav-dropdown-item"><span class="icon">📉</span> Weekly Report</a>
+                                    <a href="#" class="nav-dropdown-item"><span class="icon">📅</span> Monthly Report</a>
+                                    <a href="#" class="nav-dropdown-item"><span class="icon">🎯</span> KPI Dashboard</a>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="nav-dropdown-item"><span class="icon">🔍</span> Monitoring</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📈</span> Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-tab-group">
+                    <a href="All.html" class="nav-tab">ALL (6/6)</a>
+                    <a href="On Hold.html" class="nav-tab active">ON HOLD (3/3)</a>
+                    <a href="WIP.html" class="nav-tab">WORK IN PROGRESS (3/3)</a>
+                    <a href="Done.html" class="nav-tab">DONE (3/3)</a>
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <div class="search-container">
+                    <span style="cursor: pointer; color: #555;">⟳ Refresh</span>
+                    <span style="color: #aaa;">▽</span>
+                    <select>
+                        <option>Keyword(default, searched in all fields)</option>
+                    </select>
+                    <input type="text" placeholder="🔍 Search">
+                    <span style="color: #777; font-size: 11px;">(47 orders shown)</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="radio-cell">●</th>
+                            <th>ORDER ID ↑</th>
+                            <th>ORDER NAME</th>
+                            <th>DEADLINE</th>
+                            <th>ORIGINAL ...</th>
+                            <th>ACCOUNT ID</th>
+                            <th>TYPE</th>
+                            <th>GROUP</th>
+                            <th>SPEC ID</th>
+                            <th>#IMAGES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="radio-cell"><input type="radio" name="order"></td>
+                            <td>ⓘ 📁 ⚠️</td>
+                            <td></td>
+                            <td class="text-red">1401h : 35m</td>
+                            <td>Reviewing</td>
+                            <td></td>
+                            <td>Corporate</td>
+                            <td>0</td>
+                            <td></td>
+                            <td>1|0|0</td>
+                        </tr>
+                        <tr>
+                            <td class="radio-cell"><input type="radio" name="order"></td>
+                            <td>ⓘ 📁 ⚠️</td>
+                            <td></td>
+                            <td class="text-red">351h : 16m</td>
+                            <td>Reviewing</td>
+                            <td></td>
+                            <td>Corporate</td>
+                            <td>0</td>
+                            <td></td>
+                            <td>1|0|1</td>
+                        </tr>
+                        <tr>
+                            <td class="radio-cell"><input type="radio" name="order"></td>
+                            <td>ⓘ 📁 ✔️</td>
+                            <td></td>
+                            <td class="text-red">225h : 35m</td>
+                            <td>Work In Progress</td>
+                            <td></td>
+                            <td>Enterprise</td>
+                            <td>0</td>
+                            <td></td>
+                            <td>2|2|2</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="fab">☻</div>
+        </main>
+    </div>
+
+</body>
+</html>

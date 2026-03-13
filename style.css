@@ -1,0 +1,359 @@
+/* General Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Body Layout */
+body {
+    background-color: #ffffff;
+    color: #333;
+    display: flex;
+    flex-direction: column; 
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Top Header Bar */
+.top-header {
+    background-color: #ffffff; 
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    border-bottom: 2px solid #000;
+    z-index: 20;
+}
+
+/* Logo Styling */
+.logo {
+    height: 50px; 
+    width: auto;
+    max-width: 200px;
+}
+
+/* Wrapper for the rest of the app */
+.app-container {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    border-right: 2px solid #111827;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ffffff;
+    z-index: 10;
+    overflow-y: auto;
+}
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+.sidebar-header span.close {
+    color: #0056ff;
+    cursor: pointer;
+}
+.sidebar-nav {
+    font-size: 13px;
+    font-weight: bold;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sidebar-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+.sidebar-section-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #555;
+}
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 13px;
+}
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.dropdown-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 12px;
+    color: #555;
+}
+.dropdown select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+/* Top Navigation Tabs */
+.top-nav {
+    display: flex;
+    background-color: #f1f3f5;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+.nav-icon-group {
+    display: flex;
+    padding: 0 10px;
+    gap: 10px;
+}
+.nav-icon {
+    background-color: #0056ff;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.nav-tab-group {
+    display: flex;
+}
+.nav-tab {
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+}
+.nav-tab.active {
+    background-color: #0056ff;
+    color: white;
+}
+
+/* Search & Stats Bar */
+.action-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+.search-container select, .search-container input {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.search-container input {
+    width: 250px;
+}
+
+/* Stats Dashboard */
+.stats-dashboard {
+    display: flex;
+    gap: 20px;
+    font-size: 11px;
+    color: #333;
+    text-align: center;
+}
+.stat-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+.stat-header {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #111827;
+}
+.stat-values {
+    color: #555;
+    letter-spacing: 0.5px;
+}
+
+/* Data Table Styling */
+.table-container {
+    padding: 0 20px 20px 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+    text-align: left;
+    white-space: nowrap;
+}
+th, td {
+    padding: 12px 8px;
+    border-bottom: 1px solid #eee;
+}
+th {
+    background-color: #111827;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: sticky;
+    top: 0;
+}
+tbody tr:nth-child(even) {
+    background-color: #f1f3f5;
+}
+tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.text-red {
+    color: #d93025;
+    font-weight: bold;
+}
+.radio-cell {
+    width: 30px;
+    text-align: center;
+}
+
+/* Floating Action Button (Chat) */
+.fab {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0056ff;
+    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* --- Dropdown Menu Box Styling --- */
+
+/* Container to hold the icon and the dropdown together */
+.dropdown-menu-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* The actual white dropdown box */
+.nav-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    z-index: 100;
+    flex-direction: column;
+    padding: 8px 0;
+    margin-top: 5px;
+}
+
+/* Show the dropdown when hovering over the container */
+.dropdown-menu-container:hover .nav-dropdown {
+    display: flex; 
+}
+
+/* Individual items in the list */
+.nav-dropdown-item {
+    padding: 8px 16px;
+    font-size: 13px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Highlight row on hover */
+.nav-dropdown-item:hover {
+    background-color: #f1f3f5;
+}
+
+/* Pushes the tiny arrow for 'Reporting' to the far right */
+.nav-dropdown-item .arrow-right {
+    margin-left: auto;
+    font-size: 16px;
+    color: #888;
+}
+
+/* Fades the icons slightly to match your screenshot */
+.nav-dropdown-item span.icon {
+    opacity: 0.6;
+    font-size: 14px;
+    width: 16px;
+    text-align: center;
+}
+
+/* --- Sub-Menu (Slide-out) Styling --- */
+
+/* Make the parent item a relative container */
+.has-submenu {
+    position: relative;
+}
+
+/* The actual sub-menu box */
+.nav-sub-dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: -5px; /* Aligns with the top of the Reporting row */
+    left: 100%; /* Pushes it exactly to the right edge of the main box */
+    background-color: #ffffff;
+    min-width: 200px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    z-index: 101; /* Keeps it on top of everything else */
+    flex-direction: column;
+    padding: 8px 0;
+}
+
+/* Show the sub-menu when hovering over the parent item */
+.has-submenu:hover .nav-sub-dropdown {
+    display: flex;
+}

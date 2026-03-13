@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blok Queue Management</title>
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="Fav.jpg">
+    <link rel="icon" type="image/jpeg" sizes="96x96" href="Fav.jpg">
+    <link rel="apple-touch-icon" sizes="480x480" href="Fav.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <img src="Blok.png" alt="Company Logo" class="logo">
+
+         <img src="sothebys" alt="Second Logo" class="logo">
+    </header>
+
+    <div class="app-container">
+        
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                Order Selection <span class="close">✕</span>
+            </div>
+            <div class="sidebar-nav">
+                <div class="sidebar-nav-item">◯ > WORK IN...</div>
+            </div>
+
+            <div>
+                <div class="sidebar-section-title">Property Filter</div>
+                <div class="checkbox-group">
+                    <label class="checkbox-item"><input type="checkbox"> Jobs Over Deadline</label>
+                    <label class="checkbox-item"><input type="checkbox"> Rejected By Clients</label>
+                    <label class="checkbox-item"><input type="checkbox"> Auto QC</label>
+                    <label class="checkbox-item"><input type="checkbox"> Fast Lane</label>
+                </div>
+            </div>
+
+            <div class="dropdown-group">
+                <div class="dropdown">
+                    <label>Thumbnail Download</label>
+                    <select><option>Select Thumbnail D...</option></select>
+                </div>
+                <div class="dropdown">
+                    <label>File Download</label>
+                    <select><option>Select File Downl...</option></select>
+                </div>
+                <div class="dropdown">
+                    <label>File Upload</label>
+                    <select><option>Select File Upload...</option></select>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <div class="top-nav">
+                <div class="nav-icon-group">
+                    <div class="nav-icon">◧</div>
+                    
+                    <div class="dropdown-menu-container">
+                        <div class="nav-icon" style="background-color: transparent; color: #333; padding: 10px;">⚙️ ▽</div>
+                        
+                        <div class="nav-dropdown">
+                            <a href="#" class="nav-dropdown-item"><span class="icon">👤</span> Employee List</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">👥</span> Roles</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">🤝</span> Teams</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">🕒</span> Shifts</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📅</span> Shift Plans</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📁</span> Shift Groups</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">🎨</span> Designer Shifts</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📋</span> Specifications</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">⚙️</span> Complexities</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📄</span> File Status</a>
+                            
+                            <div class="nav-dropdown-item has-submenu">
+                                <span class="icon">📊</span> Reporting <span class="arrow-right">›</span>
+                                <div class="nav-sub-dropdown">
+                                    <a href="#" class="nav-dropdown-item"><span class="icon">📈</span> Daily Report</a>
+                                    <a href="#" class="nav-dropdown-item"><span class="icon">📉</span> Weekly Report</a>
+                                    <a href="#" class="nav-dropdown-item"><span class="icon">📅</span> Monthly Report</a>
+                                    <a href="#" class="nav-dropdown-item"><span class="icon">🎯</span> KPI Dashboard</a>
+                                </div>
+                            </div>
+                            
+                            <a href="#" class="nav-dropdown-item"><span class="icon">🔍</span> Monitoring</a>
+                            <a href="#" class="nav-dropdown-item"><span class="icon">📈</span> Dashboard</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="nav-tab-group">
+                    <a href="All.html" class="nav-tab">ALL (6/6)</a>
+                    <a href="On Hold.html" class="nav-tab">ON HOLD (3/3)</a>
+                    <a href="WIP.html" class="nav-tab active">WORK IN PROGRESS (3/3)</a>
+                    <a href="Done.html" class="nav-tab">DONE (3/3)</a>
+                </div>
+            </div>
+
+            <div class="action-bar">
+                <div class="search-container">
+                    <span style="cursor: pointer; color: #555;">⟳ Refresh</span>
+                    <span style="color: #aaa;">▽</span>
+                    <select>
+                        <option>Keyword(default, searched in all fields)</option>
+                    </select>
+                    <input type="text" placeholder="🔍 Search">
+                    <span style="color: #777; font-size: 11px;">(18 orders shown)</span>
+                </div>
+
+                <div class="stats-dashboard">
+                    <div class="stat-group">
+                        <span class="stat-header">TOTAL</span>
+                        <span class="stat-values">2455 &nbsp; 0 &nbsp; 0</span>
+                    </div>
+                    <div class="stat-group">
+                        <span class="stat-header">DOWNLOADS</span>
+                        <span class="stat-values">200 | 0 | 0 | 2255 | 0</span>
+                    </div>
+                    <div class="stat-group">
+                        <span class="stat-header">UPLOADS</span>
+                        <span class="stat-values">0 | 0 | 0 | 0 | 0 | 0</span>
+                    </div>
+                    <div class="stat-group">
+                        <span class="stat-header">WORKFLOW</span>
+                        <span class="stat-values">2455 &nbsp; 0 &nbsp; 0 &nbsp; 0 &nbsp; 0</span>
+                    </div>
+                    <div class="stat-group">
+                        <span class="stat-header">DEADLINE</span>
+                        <span class="stat-values">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ORDER ID ↑</th>
+                            <th>ORDER NAME</th>
+                            <th>DEADLINE</th>
+                            <th>ACCOUNT ID</th>
+                            <th>TYPE</th>
+                            <th>GROUP</th>
+                            <th>SPEC...</th>
+                            <th>#IMAGES</th>
+                            <th>STATUS</th>
+                            <th>A-DTPI</th>
+                            <th>A-QCTPI</th>
+                            <th>ETA</th>
+                            <th>DOWNLOAD...</th>
+                            <th>UPLOAD STA...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ⓘ ☝️</td>
+                            <td></td>
+                            <td>07h : 15m</td>
+                            <td></td>
+                            <td>Enterprise</td>
+                            <td></td>
+                            <td></td>
+                            <td>73|0|73</td>
+                            <td>73|0|0|0|0</td>
+                            <td>00m : 00s</td>
+                            <td>00m : 00s</td>
+                            <td>-</td>
+                            <td>0|0|73|0</td>
+                            <td>0|0|0|0|0</td>
+                        </tr>
+                        <tr>
+                            <td>ⓘ ☝️</td>
+                            <td></td>
+                            <td>07h : 17m</td>
+                            <td></td>
+                            <td>Enterprise</td>
+                            <td>0</td>
+                            <td></td>
+                            <td>118|0|118</td>
+                            <td>118|0|0|0|0</td>
+                            <td>00m : 00s</td>
+                            <td>00m : 00s</td>
+                            <td>-</td>
+                            <td>0|0|118|0</td>
+                            <td>0|0|0|0|0</td>
+                        </tr>
+                        <tr>
+                            <td>ⓘ ☝️</td>
+                            <td></td>
+                            <td>07h : 20m</td>
+                            <td></td>
+                            <td>Enterprise</td>
+                            <td></td>
+                            <td></td>
+                            <td>114|0|114</td>
+                            <td>114|0|0|0|0</td>
+                            <td>00m : 00s</td>
+                            <td>00m : 00s</td>
+                            <td>-</td>
+                            <td>0|0|114|0</td>
+                            <td>0|0|0|0|0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="fab">☻</div>
+        </main>
+    </div>
+
+</body>
+</html>
